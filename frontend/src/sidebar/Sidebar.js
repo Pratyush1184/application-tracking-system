@@ -16,7 +16,7 @@ export default class Sidebar extends Component {
         }
         else{
             $.ajax({
-                url: 'http://flask-group19-se.eastus.cloudapp.azure.com/:5000/logout',
+                url: 'https://heroku-flask-react.herokuapp.com/logout',
                 method: 'POST',
                 contentType: 'application/json',
                 headers:{

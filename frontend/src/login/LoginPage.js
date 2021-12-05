@@ -17,7 +17,7 @@ export default class LoginPage extends Component {
             return
         }
         $.ajax({
-            url: 'http://flask-group19-se.eastus.cloudapp.azure.com/login',
+            url: 'https://heroku-flask-react.herokuapp.com/login',
             method: 'POST',
             data: JSON.stringify({
                 email: this.state.username,

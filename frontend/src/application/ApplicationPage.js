@@ -24,7 +24,7 @@ export default class CardBoard extends Component {
         let token = localStorage.getItem('auth-token')
         if(token){
             return $.ajax({
-                url: 'http://flask-group19-se.eastus.cloudapp.azure.com/application',
+                url: 'https://heroku-flask-react.herokuapp.com/application',
                 method: 'GET',
                 headers:{
                     'x-access-token': token
@@ -73,7 +73,7 @@ export default class CardBoard extends Component {
             if (application.id == null){
                 // current application is a new application, create a new one and save in the backend.
                 $.ajax({
-                    url: 'http://flask-group19-se.eastus.cloudapp.azure.com/application', //TODO: will have to replace with production URL
+                    url: 'https://heroku-flask-react.herokuapp.com/application', //TODO: will have to replace with production URL
                     method: 'POST',
                     async: false,
                     headers:{
@@ -95,7 +95,7 @@ export default class CardBoard extends Component {
                 })
             } else {
                 $.ajax({
-                    url: 'http://flask-group19-se.eastus.cloudapp.azure.com/application',
+                    url: 'https://heroku-flask-react.herokuapp.com/application',
                     method: 'PUT',
                     headers:{
                         'x-access-token': token
@@ -136,7 +136,7 @@ export default class CardBoard extends Component {
         }
         else{
             $.ajax({
-                url: 'http://flask-group19-se.eastus.cloudapp.azure.com/application',
+                url: 'https://heroku-flask-react.herokuapp.com/application',
                 method: 'DELETE',
                 headers:{
                     'x-access-token': token
